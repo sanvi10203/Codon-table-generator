@@ -35,3 +35,9 @@ codon_table = {
     "GGT": "Glycine", "GGC": "Glycine",
     "GGA": "Glycine", "GGG": "Glycine"
 }
+
+print(codon_table)
+print("Total number of codons:", len(codon_table))
+print("Codons:", list(codon_table.keys()))
+print("Amino acids:", list(codon_table.values()))
+
