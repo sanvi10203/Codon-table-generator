@@ -41,3 +41,21 @@ print("Total number of codons:", len(codon_table))
 print("Codons:", list(codon_table.keys()))
 print("Amino acids:", list(codon_table.values()))
 
+print("\nSTANDARD CODON TABLE")
+print("--------------------")
+
+for codon, amino_acid in codon_table.items():
+    print(codon, ":", amino_acid)
+
+sequence_type = input(
+    "\nEnter sequence type (DNA or RNA): "
+).upper().strip()
+
+sequence = input("Enter your sequence: ").upper().strip()
+
+if sequence_type == "RNA":
+    sequence = sequence.replace("U", "T")
+
+elif sequence_type != "DNA":
+    print("Invalid sequence type. Enter DNA or RNA.")
+    exit()
