@@ -59,3 +59,32 @@ if sequence_type == "RNA":
 elif sequence_type != "DNA":
     print("Invalid sequence type. Enter DNA or RNA.")
     exit()
+
+#Divide the sequence into codons
+codons = []
+for i in range(0, len(sequence), 3):
+    codon = sequence[i:i + 3]
+    codons.append(codon)
+
+#Translate the codons
+amino_acids = []
+start_codons = []
+stop_codons = []
+
+for codon in codons:
+
+     if len(codon) < 3:
+         amino_acids.append("Incomplete codon")
+
+     else:
+         amino_acid = codon_table[codon]
+         amino_acids.append(amino_acid)
+
+     if codon == "ATG":
+        start_codons.append(codon)
+        
+     elif codon == "TAA" or codon == "TAG" or codon == "TGA":
+        stop_codons.append(codon)
+        
+
+
