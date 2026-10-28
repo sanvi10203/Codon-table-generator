@@ -93,5 +93,10 @@ else:
  print("All codons contain three nucleotides.")
 
 
+#Display the results
+print("\n===== TRANSLATION RESULTS =====")
+print("Sequence:", sequence)
+print("Codons:", " - ".join(codons))
+print("Amino acids:", " - ".join(amino_acids))
 
 
