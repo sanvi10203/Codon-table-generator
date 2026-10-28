@@ -85,6 +85,13 @@ for codon in codons:
         
      elif codon == "TAA" or codon == "TAG" or codon == "TGA":
         stop_codons.append(codon)
-        
+
+#Check for incomplete codon
+if len(sequence) % 3 != 0:
+    print("Warning: Incomplete codon at the end.")
+else:
+ print("All codons contain three nucleotides.")
+
+
 
 
