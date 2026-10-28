@@ -56,9 +56,12 @@ sequence = input("Enter your sequence: ").upper().strip()
 if sequence_type == "RNA":
     sequence = sequence.replace("U", "T")
 
-elif sequence_type != "DNA":
-    print("Invalid sequence type. Enter DNA or RNA.")
-    exit()
+if sequence == "":
+        print("Error: Sequence cannot be empty.")
+
+elif not all(base in "ATGC" for base in sequence):
+        print("Error: Enter only valid DNA/RNA nucleotides.")
+
 
 #Divide the sequence into codons
 codons = []
