@@ -108,3 +108,8 @@ Invalid sequence type. Enter DNA or RNA.
    - `ATG` is added to the start-codon list; `TAA`, `TAG`, `TGA` to the stop-codon list
 7. **Check completeness** – if `len(sequence) % 3 != 0`, a warning is printed.
 8. **Display results** – sequence, codons, amino acids, start codon(s) and stop codon(s).
+---
+
+# Codon Table Comparison
+
+I compared my codon table with the [Genetic Codes (pygenetic_code) GitHub repository](https://github.com/linsalrob/genetic_codes) developed by Robert A. Edwards. The reference repository provides tools for translating DNA sequences using genetic codes. My program uses a Python dictionary to store all 64 codons and their corresponding amino acids or stop signals. Both projects use the standard genetic code for codon translation. This comparison helps verify the accuracy of my codon table and demonstrates how Python can be used for biological sequence analysis.
